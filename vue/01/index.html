@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1>{{message}}</h1>
+
+    <input v-model="message">
+
+    <pre>
+        {{$data | json}}
+    </pre>
+</div>
+<script src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
+<script>
+    new Vue ({
+        el: '#app',
+        data: {
+            message: "Hello world!"
+        }
+    })
+</script>
+</body>
+</html>

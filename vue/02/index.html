@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            display: block;
+        }
+
+        .error {
+            color: #ff2a44;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>{{message}}</h1>
+
+    <span class="error" v-show="!message">This is an empty field</span>
+    <textarea name="hui" id="" cols="30" rows="10" v-model="message"></textarea>
+    <button type="submit" v-show="message">Send!!!</button>
+
+    <pre>
+        {{$data}}
+    </pre>
+</div>
+<script src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
+<script>
+    new Vue ({
+        el: '#app',
+        data: {
+            message: ""
+        }
+    })
+</script>
+</body>
+</html>
